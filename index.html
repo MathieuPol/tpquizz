@@ -11,31 +11,33 @@
 <body>
     <header>
         <h1>Bienvenue dans le quizz</h1>
-        <nav>
-            <button>
-                <a href="#">HTML</a>
-            </button>
-            <button>
-                <a href="#">CSS</a>
-            </button>
-            <button>
-                <a href="#">Javascript</a>
-            </button>
-            <button>
-                <a href="#">PHP</a>
-            </button>
-            <button>
-                <a href="#">MySQL</a>
-            </button>
-            <button>
-                <a href="#">Symfony</a>
-            </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__list--item">
+                    <button class="nav__list--item--btn" id="html">HTML</button>
+                </li>
+                <li class="nav__list--item">
+                    <button class="nav__list--item--btn" id="css">CSS</button>
+                </li>
+                <li class="nav__list--item">
+                    <button class="nav__list--item--btn" id="jscript">Javascript</button>
+                </li>
+                <li class="nav__list--item">
+                    <button class="nav__list--item--btn" id="php">PHP</button>
+                </li>
+                <li class="nav__list--item">
+                    <button class="nav__list--item--btn" id="mysql">MySQL</button>
+                </li>
+                <li class="nav__list--item">
+                    <button class="nav__list--item--btn" id="symfo">Symfony</button>
+                </li>
+            </ul>
         </nav>
     </header>
     <main>
         <h2>score:</h2>
         <h2>Question</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quam.</p>
+        <p class="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quam.</p>
         <h2>Choisissez une réponse</h2>
         <button>Réponse A</button>
         <button>Réponse A</button>
@@ -45,5 +47,8 @@
     <footer>
         <p>réalisé par Mathieu Poltorak</p>
     </footer>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/component/data.js"></script>
+    <script src="assets/js/component/quizz.js"></script>
 </body>
 </html>

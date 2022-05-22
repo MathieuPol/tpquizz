@@ -27,3 +27,30 @@ button{
 p{
     font-size: 1.5rem;
 }
+
+.nav__list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+li{
+    list-style-type: none;
+    margin: 1em;
+}
+
+button {
+    cursor: pointer;
+}
+
+.nav__list--item--btn{
+    border-radius: 20rem;
+}
+
+.nav__list--item :hover{
+    background-color: black;
+    color: white;
+    border: none;
+/*     transform: scale(1.5);
+    transition: 1s; */
+}
