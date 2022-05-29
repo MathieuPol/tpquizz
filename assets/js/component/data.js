@@ -35,7 +35,13 @@ const data = {
 
     allAnswers : {
         'HTML': {
-            1: 'La réponse est Blanc'
+            'reponse' : {
+                1: 1,
+                2: {1: 'La réponse est Vert'}
+            },
+            'doc' : {
+
+            }
         }
     }
 

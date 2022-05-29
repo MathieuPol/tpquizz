@@ -54,3 +54,18 @@ button {
 /*     transform: scale(1.5);
     transition: 1s; */
 }
+
+.answer{
+    display: flex;
+    flex-flow: column-reverse wrap;
+    justify-content: space-between;
+    border: solid;
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 50%;
+    
+}
+
+.hide{
+    display: none;
+}
