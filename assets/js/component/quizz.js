@@ -23,11 +23,11 @@ const quizz = {
 
     handleNavBtn: function(evt){
         evt.preventDefault();
+        document.querySelector('main').classList.toggle('hide');
         const elm = evt.currentTarget.textContent;
         quizz.setQuizz(elm);
-
-
-
+        document.querySelector('.quizz').setAttribute('quizzSelector', elm);
+        document.querySelector('.quizz').classList.add(elm);
     },
 
     setQuizz: function(elm)
@@ -39,9 +39,8 @@ const quizz = {
 
         const answerQuizz = data.allAnswers[elm];
 
-
         let index = 1;
-
+        document.querySelector('.quizz').setAttribute('questionSelector', index);
         let qBody = document.querySelector('.question');
         qBody.textContent = currentQuestion[index];
 
@@ -54,34 +53,46 @@ const quizz = {
             let btnA = iterator.querySelector('button');
             btnA.setAttribute("value", i);
             i++;
-
         }
-
 
 //* Une fois les buttons créés on leurs assigne un eventlistener
     },
 
 
-    checkAnswer: function(elm, index, userResp, correctResp){
+    checkAnswer: function(userResp, correctResp){
         if(correctResp == userResp)
         {
-            console.log("vous avez la bonne réponse");
-            return;
+
+            return true;
         }
-        console.log("c'est faux");
+        return false;
     },
 
 
     handleAnswerBtn: function(evt){
         evt.preventDefault();
         let currentBtn = evt.currentTarget;
-
-
-
-
+        let userResp = currentBtn.value;
 
         
-    }
+        let elm = document.querySelector('.quizz').getAttribute('quizzselector');
+        let index = document.querySelector('.quizz').getAttribute('questionselector');
+        correctResp = data.allAnswers[elm]['reponse'][index];
+        if (quizz.checkAnswer(userResp, correctResp)== true){
+            quizz.correct();
 
-    
+        }
+        else{
+        quizz.wrong()
+        };
+    },
+
+    correct: function(){
+        alert("Bonne réponse");
+    },
+
+    wrong: function(){
+        alert('mauvaise réponse');
+    },
+ 
 }
