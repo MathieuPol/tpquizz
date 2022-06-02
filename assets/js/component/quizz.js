@@ -33,16 +33,21 @@ const quizz = {
         document.querySelector('.quizz').setAttribute('quizzSelector', elm);
         document.querySelector('.quizz').classList.add(elm);
         document.querySelector('.nav__list').classList.add('hide');
+        document.querySelector('.navSelector').classList.add('hide');
     },
 
     setQuizz: function(elm)
     {
-        console.log(quizz.index);
+
                 //*Element lié aux data
+        if(document.querySelector('.nextBtn'))
+        {
+            document.querySelector('.nextBtn').remove();
+        }
+
         const currentQuizz = data.allQuestions[elm];
         const currentQuestion = currentQuizz.questions;
         const currentAnswer = currentQuizz.answers[quizz.index];
-        console.log(currentAnswer);
         const answerQuizz = data.allAnswers[elm];
 
         //let index = 1;
@@ -124,6 +129,7 @@ const quizz = {
 
     correct: function(){
         alert("Bonne réponse");
+        quizz.removeAnswerEventListener();
     },
 
     wrong: function(){
@@ -141,7 +147,6 @@ const quizz = {
         evt.preventDefault();
         quizz.index ++;
         let elm = document.querySelector('.quizz').getAttribute('quizzselector');
-        console.log(elm);
         quizz.nextQuestion();
         quizz.addAnswerEventListener();
         quizz.setQuizz(elm);
@@ -150,7 +155,6 @@ const quizz = {
 
     nextQuestion: function(){
         let answerclass = document.querySelectorAll('.answer button');
-        console.log(answerclass);
         for (const iterator of answerclass) {
             iterator.classList.remove('correct');
             iterator.classList.remove('wrong');
