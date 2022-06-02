@@ -79,8 +79,83 @@ const data = {
 
         },
         'CSS' : {
-            'questions': {},
-            'answers' : {}
+            'questions': {
+                1: "Que veux dire l'abréviation CSS ?",
+                2: "Quelle déclaration CSS permet d'ajouter une majuscule à chaque mot d'un élément HTML ?",
+                3: "Lequel de ces sélecteurs permet de cibler l'élément HTML avec l'attribut id=\"titi\" ?",
+                4: "Lequel de ces sélecteurs permet de cibler l'élément HTML avec l'attribut class=\"toto\" ?",
+                5: "Quelle propriété CSS permet de modifier la couleur d'un élément HTML ?",
+                6: "Quelle propriété CSS permet de modifier la taille de la police d'un élément HTML ?",
+                7: "Lequel de ces sélecteurs a le poids le plus important et donc la priorité sur les autres ?",
+                8: "Quelle déclaration permet de supprimer le soulignement d'un élément en CSS ?",
+                9: "Quelle valeur de la propriété display: permet de faire disparaître un élément ?",
+                10: "Quelle propriété permet de modifier la police d'un élément HTML ?"
+
+            
+            },
+            'answers' : {
+                1: {
+                    1: 'Colorful Style Sheets',
+                    2: 'Computer Style Sheets',
+                    3: 'Creative Style Sheets',
+                    4: 'Cascading Style Sheets'
+                },
+                2: {
+                    1: 'text-transform: capitalize;',
+                    2: 'font-transform: capitalize;',
+                    3: 'text-decoration: uppercase;',
+                    4: "C'est impossible"
+                },
+                3: {
+                    1: '#titi {}',
+                    2: '*titi {}',
+                    3: '.titi {}',
+                    4: "titi {}"
+                },
+                4: {
+                    1: "#titi {}",
+                    2: "*titi {}",
+                    3: '.titi {}',
+                    4: 'titi {}'
+                },
+                5: {
+                    1: 'fgcolor:',
+                    2: 'text-color:',
+                    3: 'color:',
+                    4: 'bgcolor:'
+                },
+                6: {
+                    1: 'text-size:',
+                    2: 'font-style:',
+                    3: 'text-style:',
+                    4: 'font-size:'
+                },
+                7: {
+                    1: '#toto',
+                    2: '.titi',
+                    3: 'body',
+                    4: '*'
+                },
+                8: {
+                    1: 'underline: none;',
+                    2: 'text-decoration: none;',
+                    3: 'text-decoration: underline;',
+                    4: 'text-decoration: hidden;'
+                },
+                9: {
+                    1: 'hidden',
+                    2: 'invisible',
+                    3: 'no',
+                    4: 'none'
+                },
+                10: {
+                    1: 'police:',
+                    2: 'font:',
+                    3: 'font-family:',
+                    4: 'text-family:'
+                },
+            
+            }
         },
         'Javascript' : {
             'questions': {},
