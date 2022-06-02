@@ -1,7 +1,7 @@
 const quizz = {
 
     index: 1,
-
+    score: 0,
 
 
     quizzInit: function(){
@@ -87,6 +87,8 @@ const quizz = {
         let elm = document.querySelector('.quizz').getAttribute('quizzselector');
         let index = document.querySelector('.quizz').getAttribute('questionselector');
         correctResp = data.allAnswers[elm]['reponse'][index];
+        const allBtn = document.querySelectorAll('answer');
+
         if (quizz.checkAnswer(userResp, correctResp)){
             currentBtn.classList.add('correct');
             quizz.correct();
@@ -96,14 +98,27 @@ const quizz = {
 
             let nextBtn = document.createElement('Button');
             nextBtn.textContent = "Question suivante";
-            nextBtn.classList.add('correct');
-            document.querySelector('.quizz').append(nextBtn);
+            nextBtn.classList.add('correct', 'nextBtn');
+            document.querySelector('.documentation').appendChild(nextBtn);
             nextBtn.addEventListener("click", quizz.handleNextBtn);
+            quizz.score++;
+            document.querySelector('.score').textContent = "score:" + quizz.score + "/10";
 
         }
         else{
             currentBtn.classList.add('wrong');
-            quizz.wrong()
+            quizz.wrong();
+            //*On insere la documentation
+            doContainer.classList.remove('hide');
+            doContent.textContent = data.allAnswers[elm]['doc'][index];
+
+            let nextBtn = document.createElement('Button');
+            nextBtn.textContent = "Question suivante";
+            nextBtn.classList.add('correct', 'nextBtn');
+            document.querySelector('.documentation').appendChild(nextBtn);
+            nextBtn.addEventListener("click", quizz.handleNextBtn);
+            document.querySelector('.score').textContent = "score:" + quizz.score + "/10";
+
         };
     },
 
@@ -113,6 +128,13 @@ const quizz = {
 
     wrong: function(){
         alert('mauvaise réponse');
+        const allBtn = document.querySelector('.answer');
+        quizz.removeAnswerEventListener();
+
+
+
+
+
     },
  
     handleNextBtn: function(evt){
@@ -121,6 +143,7 @@ const quizz = {
         let elm = document.querySelector('.quizz').getAttribute('quizzselector');
         console.log(elm);
         quizz.nextQuestion();
+        quizz.addAnswerEventListener();
         quizz.setQuizz(elm);
 
     },
@@ -129,12 +152,19 @@ const quizz = {
         let answerclass = document.querySelectorAll('.answer button');
         console.log(answerclass);
         for (const iterator of answerclass) {
-            iterator.classList.remove('correct')
-            
+            iterator.classList.remove('correct');
+            iterator.classList.remove('wrong');
         }
+        document.querySelector('.documentation').classList.add('hide');
 
+    },
 
-    }
+    removeAnswerEventListener: function(){
+        const btnQuizz = document.querySelectorAll('.quizz button');
+        for (const btn of btnQuizz) {
+            btn.removeEventListener("click", quizz.handleAnswerBtn);            
+        }
+    },
 
 
 
