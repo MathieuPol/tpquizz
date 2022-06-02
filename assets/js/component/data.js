@@ -2,13 +2,19 @@ const data = {
     allQuestions : {
         'HTML': {
             'questions': {
-                1: 'Quelle est la couleur du cheval blanc d\'Henry 4?'
+                1: 'Quelle est la couleur du cheval blanc d\'Henry 4?',
+                2: 'test'
             },
             'answers' : {
-                1: 'Blanc',
-                2: 'gris',
-                3: 'marron',
-                4: 'jaune'
+                1: {
+                    1: 'Blanc',
+                    2: 'gris',
+                    3: 'marron',
+                    4: 'jaune'
+                },
+                2: {
+                    1: 'test'
+                }
             }
         },
         'CSS' : {
@@ -39,7 +45,8 @@ const data = {
                 1: 1,
                 2: {1: 'La réponse est Vert'}
             },
-            'doc' : {
+            'doc' : { 
+                1: 'lorem10'
 
             }
         }
