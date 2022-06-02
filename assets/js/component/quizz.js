@@ -1,6 +1,6 @@
 const quizz = {
 
-    index: 1,
+    index: 9,
     score: 0,
 
 
@@ -50,7 +50,7 @@ const quizz = {
         const currentAnswer = currentQuizz.answers[quizz.index];
         const answerQuizz = data.allAnswers[elm];
 
-        //let index = 1;
+
         document.querySelector('.quizz').setAttribute('questionSelector', quizz.index);
         let qBody = document.querySelector('.question');
         qBody.textContent = currentQuestion[quizz.index];
@@ -128,12 +128,10 @@ const quizz = {
     },
 
     correct: function(){
-        alert("Bonne réponse");
         quizz.removeAnswerEventListener();
     },
 
     wrong: function(){
-        alert('mauvaise réponse');
         const allBtn = document.querySelector('.answer');
         quizz.removeAnswerEventListener();
 
@@ -146,11 +144,27 @@ const quizz = {
     handleNextBtn: function(evt){
         evt.preventDefault();
         quizz.index ++;
-        let elm = document.querySelector('.quizz').getAttribute('quizzselector');
-        quizz.nextQuestion();
-        quizz.addAnswerEventListener();
-        quizz.setQuizz(elm);
 
+        let elm = document.querySelector('.quizz').getAttribute('quizzselector');
+
+
+        if(quizz.index <= 10){ 
+            quizz.nextQuestion();
+            quizz.addAnswerEventListener();
+            quizz.setQuizz(elm);
+            return
+        }
+        else{
+            document.querySelector('main').classList.add('hide');
+            document.querySelector('.navSelector').classList.remove('hide');
+            document.querySelector('.nav__list').classList.remove('hide');
+            quizz.alertDisplay();
+            quizz.index = 1;
+            quizz.score = 0;
+
+            quizz.quizzInit();
+            
+        }
     },
 
     nextQuestion: function(){
@@ -169,6 +183,22 @@ const quizz = {
             btn.removeEventListener("click", quizz.handleAnswerBtn);            
         }
     },
+
+    alertDisplay: function(){
+        if(quizz.score < 5){
+            alert("Ne lachez rien à force de traveiller on fini par y arriver!!");
+            return
+        }
+        if ( quizz.score >= 5 && quizz.score <= 7){
+            alert("Encore juste un effort et c'est tout bon!!");
+            return
+        }
+        if(quizz.score > 7){
+            alert("Bravo c'est presque un sans fautes");
+            return;
+        }
+    }
+
 
 
 

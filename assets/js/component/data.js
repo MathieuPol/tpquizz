@@ -19,7 +19,7 @@ const data = {
                     1: 'HomeTabulation of Mailing List',
                     2: 'HyperText Markup Language',
                     3: 'Hyperspace TradeMark Language',
-                    4: 'XpTdr Mdr Lol'
+                    4: 'Hyper Téméraire Mais Limité'
                 },
                 2: {
                     1: 'À mettre en forme des pages web',
@@ -193,6 +193,23 @@ const data = {
                 1: 'lorem10'
 //4 Balise autofermante
 //8 src (pour source) permet à la balise <img> de faire le lien vers le chemin de l'image.
+            }
+        },
+        'CSS': {
+            'reponse' : {
+                1: 4,
+                2: 1,
+                3: 1,
+                4: 3,
+                5: 3,
+                6: 4,
+                7: 1,
+                8: 2,
+                9: 4,
+                10: 3,
+            },
+            'doc' : { 
+                1: 'lorem10'
             }
         }
     }
