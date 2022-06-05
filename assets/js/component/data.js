@@ -28,7 +28,7 @@ const data = {
                 },
                 3: {
                     1: 'Dans les années 70, avec Arpanet',
-                    2: 'Entre 1986 et 1988, avec le Club Dorothée',
+                    2: 'En 1991 peut être',
                     3: 'Plutôt en 1993 non ? Sous le mandat Bill Clinton',
                     4: "En 1990 exactement, avec la naissance d'Emma Watson"
                 },
@@ -471,7 +471,7 @@ const data = {
             'reponse' : {
                 1: 2,
                 2: 2,
-                3: 3,
+                3: 2,
                 4: 2,
                 5: 4,
                 6: 1,
@@ -481,7 +481,9 @@ const data = {
                 10: 1,
             },
             'doc' : { 
-                1: 'Le HyperText Markup Language, généralement abrégé HTML ou, dans sa dernière version, HTML5, est le langage de balisage conçu pour représenter les pages web.'
+                1: 'Le HyperText Markup Language, généralement abrégé HTML ou, dans sa dernière version, HTML5, est le langage de balisage conçu pour représenter les pages web.',
+                2: "Le langage html est un code utilisé pour structurer une page Internet, c'est-à-dire pour indiquer quels éléments doivent apparaître, dans quel ordre ils doivent se situer et quelles actions ils effectuent.",
+                3: "C'est en août 1991 que Tim Berners-Lee annonce publiquement son travail, en utilisant d'ailleurs le premier fichier HTML de l'histoire. C'est donc cette date qui marque la naissance officielle de l'HTML."
 //4 Balise autofermante
 //8 src (pour source) permet à la balise <img> de faire le lien vers le chemin de l'image.
             }
