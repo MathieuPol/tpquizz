@@ -66,8 +66,43 @@ button {
     
 }
 
+.answer p{
+    background-color: white;
+    margin-bottom: 0;
+}
+
 .HTML{
+    background-image: url(../image/HTML.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: #e8971c;
+}
+
+.CSS{
+    background-color: rgb(40, 98, 233);
+}
+
+.Javascript{
+    background-color: rgb(239, 216, 29);
+}
+
+.PHP{
+    background-color: rgb(115, 119, 173);
+}
+
+.MySQL{
+    background-image: url(../image/MySQL.svg.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.Symfony{
+    background-image: url(../image/Symfony.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .correct{

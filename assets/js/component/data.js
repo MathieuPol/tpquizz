@@ -12,7 +12,6 @@ const data = {
                 8: 'Citez un attribut HTML lié aux images',
                 9: "Quel attribut permet d'indiquer la destination d'un lien ?",
                 10: 'À quoi servent les spécifications ARIA, liées à HTML ?'
-
             },
             'answers' : {
                 1: {
@@ -158,20 +157,312 @@ const data = {
             }
         },
         'Javascript' : {
-            'questions': {},
-            'answers' : {}
+            'questions': {
+                1: 'Que signifie HTML ?',
+                2: 'À quoi sert HTML ?',
+                3: 'En quelle année est né HTML ?',
+                4: "Qu'est ce qu'un navigateur web ?",
+                5: 'Comment représenter un paragraphe en HTML ?',
+                6: 'Comment représenter une liste en HTML ?',
+                7: "Trouvez l'intrus dans cette liste",
+                8: 'Citez un attribut HTML lié aux images',
+                9: "Quel attribut permet d'indiquer la destination d'un lien ?",
+                10: 'À quoi servent les spécifications ARIA, liées à HTML ?'
+            },
+            'answers' : {
+                1: {
+                    1: 'Colorful Style Sheets',
+                    2: 'Computer Style Sheets',
+                    3: 'Creative Style Sheets',
+                    4: 'Cascading Style Sheets'
+                },
+                2: {
+                    1: 'text-transform: capitalize;',
+                    2: 'font-transform: capitalize;',
+                    3: 'text-decoration: uppercase;',
+                    4: "C'est impossible"
+                },
+                3: {
+                    1: '#titi {}',
+                    2: '*titi {}',
+                    3: '.titi {}',
+                    4: "titi {}"
+                },
+                4: {
+                    1: "#titi {}",
+                    2: "*titi {}",
+                    3: '.titi {}',
+                    4: 'titi {}'
+                },
+                5: {
+                    1: 'fgcolor:',
+                    2: 'text-color:',
+                    3: 'color:',
+                    4: 'bgcolor:'
+                },
+                6: {
+                    1: 'text-size:',
+                    2: 'font-style:',
+                    3: 'text-style:',
+                    4: 'font-size:'
+                },
+                7: {
+                    1: '#toto',
+                    2: '.titi',
+                    3: 'body',
+                    4: '*'
+                },
+                8: {
+                    1: 'underline: none;',
+                    2: 'text-decoration: none;',
+                    3: 'text-decoration: underline;',
+                    4: 'text-decoration: hidden;'
+                },
+                9: {
+                    1: 'hidden',
+                    2: 'invisible',
+                    3: 'no',
+                    4: 'none'
+                },
+                10: {
+                    1: 'police:',
+                    2: 'font:',
+                    3: 'font-family:',
+                    4: 'text-family:'
+                },
+            
+                
+            }
         },
         'PHP': {
-            'questions': {},
-            'answers' : {}
+            'questions': {
+                1: 'Que signifie HTML ?',
+                2: 'À quoi sert HTML ?',
+                3: 'En quelle année est né HTML ?',
+                4: "Qu'est ce qu'un navigateur web ?",
+                5: 'Comment représenter un paragraphe en HTML ?',
+                6: 'Comment représenter une liste en HTML ?',
+                7: "Trouvez l'intrus dans cette liste",
+                8: 'Citez un attribut HTML lié aux images',
+                9: "Quel attribut permet d'indiquer la destination d'un lien ?",
+                10: 'À quoi servent les spécifications ARIA, liées à HTML ?'
+            },
+            'answers' : {
+                1: {
+                    1: 'Colorful Style Sheets',
+                    2: 'Computer Style Sheets',
+                    3: 'Creative Style Sheets',
+                    4: 'Cascading Style Sheets'
+                },
+                2: {
+                    1: 'text-transform: capitalize;',
+                    2: 'font-transform: capitalize;',
+                    3: 'text-decoration: uppercase;',
+                    4: "C'est impossible"
+                },
+                3: {
+                    1: '#titi {}',
+                    2: '*titi {}',
+                    3: '.titi {}',
+                    4: "titi {}"
+                },
+                4: {
+                    1: "#titi {}",
+                    2: "*titi {}",
+                    3: '.titi {}',
+                    4: 'titi {}'
+                },
+                5: {
+                    1: 'fgcolor:',
+                    2: 'text-color:',
+                    3: 'color:',
+                    4: 'bgcolor:'
+                },
+                6: {
+                    1: 'text-size:',
+                    2: 'font-style:',
+                    3: 'text-style:',
+                    4: 'font-size:'
+                },
+                7: {
+                    1: '#toto',
+                    2: '.titi',
+                    3: 'body',
+                    4: '*'
+                },
+                8: {
+                    1: 'underline: none;',
+                    2: 'text-decoration: none;',
+                    3: 'text-decoration: underline;',
+                    4: 'text-decoration: hidden;'
+                },
+                9: {
+                    1: 'hidden',
+                    2: 'invisible',
+                    3: 'no',
+                    4: 'none'
+                },
+                10: {
+                    1: 'police:',
+                    2: 'font:',
+                    3: 'font-family:',
+                    4: 'text-family:'
+                },
+            
+            }
         },
         'MySQL': {
-            'questions': {},
-            'answers' : {}
+            'questions': {
+                1: 'Que signifie HTML ?',
+                2: 'À quoi sert HTML ?',
+                3: 'En quelle année est né HTML ?',
+                4: "Qu'est ce qu'un navigateur web ?",
+                5: 'Comment représenter un paragraphe en HTML ?',
+                6: 'Comment représenter une liste en HTML ?',
+                7: "Trouvez l'intrus dans cette liste",
+                8: 'Citez un attribut HTML lié aux images',
+                9: "Quel attribut permet d'indiquer la destination d'un lien ?",
+                10: 'À quoi servent les spécifications ARIA, liées à HTML ?'
+            },
+            'answers' : {
+                1: {
+                    1: 'Colorful Style Sheets',
+                    2: 'Computer Style Sheets',
+                    3: 'Creative Style Sheets',
+                    4: 'Cascading Style Sheets'
+                },
+                2: {
+                    1: 'text-transform: capitalize;',
+                    2: 'font-transform: capitalize;',
+                    3: 'text-decoration: uppercase;',
+                    4: "C'est impossible"
+                },
+                3: {
+                    1: '#titi {}',
+                    2: '*titi {}',
+                    3: '.titi {}',
+                    4: "titi {}"
+                },
+                4: {
+                    1: "#titi {}",
+                    2: "*titi {}",
+                    3: '.titi {}',
+                    4: 'titi {}'
+                },
+                5: {
+                    1: 'fgcolor:',
+                    2: 'text-color:',
+                    3: 'color:',
+                    4: 'bgcolor:'
+                },
+                6: {
+                    1: 'text-size:',
+                    2: 'font-style:',
+                    3: 'text-style:',
+                    4: 'font-size:'
+                },
+                7: {
+                    1: '#toto',
+                    2: '.titi',
+                    3: 'body',
+                    4: '*'
+                },
+                8: {
+                    1: 'underline: none;',
+                    2: 'text-decoration: none;',
+                    3: 'text-decoration: underline;',
+                    4: 'text-decoration: hidden;'
+                },
+                9: {
+                    1: 'hidden',
+                    2: 'invisible',
+                    3: 'no',
+                    4: 'none'
+                },
+                10: {
+                    1: 'police:',
+                    2: 'font:',
+                    3: 'font-family:',
+                    4: 'text-family:'
+                },
+            }
         },
         'Symfony': {
-            'questions': {},
-            'answers' : {}
+            'questions': {
+                1: 'Que signifie HTML ?',
+                2: 'À quoi sert HTML ?',
+                3: 'En quelle année est né HTML ?',
+                4: "Qu'est ce qu'un navigateur web ?",
+                5: 'Comment représenter un paragraphe en HTML ?',
+                6: 'Comment représenter une liste en HTML ?',
+                7: "Trouvez l'intrus dans cette liste",
+                8: 'Citez un attribut HTML lié aux images',
+                9: "Quel attribut permet d'indiquer la destination d'un lien ?",
+                10: 'À quoi servent les spécifications ARIA, liées à HTML ?'
+            },
+            'answers' : {
+                1: {
+                    1: 'Colorful Style Sheets',
+                    2: 'Computer Style Sheets',
+                    3: 'Creative Style Sheets',
+                    4: 'Cascading Style Sheets'
+                },
+                2: {
+                    1: 'text-transform: capitalize;',
+                    2: 'font-transform: capitalize;',
+                    3: 'text-decoration: uppercase;',
+                    4: "C'est impossible"
+                },
+                3: {
+                    1: '#titi {}',
+                    2: '*titi {}',
+                    3: '.titi {}',
+                    4: "titi {}"
+                },
+                4: {
+                    1: "#titi {}",
+                    2: "*titi {}",
+                    3: '.titi {}',
+                    4: 'titi {}'
+                },
+                5: {
+                    1: 'fgcolor:',
+                    2: 'text-color:',
+                    3: 'color:',
+                    4: 'bgcolor:'
+                },
+                6: {
+                    1: 'text-size:',
+                    2: 'font-style:',
+                    3: 'text-style:',
+                    4: 'font-size:'
+                },
+                7: {
+                    1: '#toto',
+                    2: '.titi',
+                    3: 'body',
+                    4: '*'
+                },
+                8: {
+                    1: 'underline: none;',
+                    2: 'text-decoration: none;',
+                    3: 'text-decoration: underline;',
+                    4: 'text-decoration: hidden;'
+                },
+                9: {
+                    1: 'hidden',
+                    2: 'invisible',
+                    3: 'no',
+                    4: 'none'
+                },
+                10: {
+                    1: 'police:',
+                    2: 'font:',
+                    3: 'font-family:',
+                    4: 'text-family:'
+                },
+            
+            }
         },        
     },
 
@@ -196,6 +487,74 @@ const data = {
             }
         },
         'CSS': {
+            'reponse' : {
+                1: 4,
+                2: 1,
+                3: 1,
+                4: 3,
+                5: 3,
+                6: 4,
+                7: 1,
+                8: 2,
+                9: 4,
+                10: 3,
+            },
+            'doc' : { 
+                1: 'lorem10'
+            }
+        },
+        'Javascript': {
+            'reponse' : {
+                1: 4,
+                2: 1,
+                3: 1,
+                4: 3,
+                5: 3,
+                6: 4,
+                7: 1,
+                8: 2,
+                9: 4,
+                10: 3,
+            },
+            'doc' : { 
+                1: 'lorem10'
+            }
+        },
+        'PHP': {
+            'reponse' : {
+                1: 4,
+                2: 1,
+                3: 1,
+                4: 3,
+                5: 3,
+                6: 4,
+                7: 1,
+                8: 2,
+                9: 4,
+                10: 3,
+            },
+            'doc' : { 
+                1: 'lorem10'
+            }
+        },
+        'MySQL': {
+            'reponse' : {
+                1: 4,
+                2: 1,
+                3: 1,
+                4: 3,
+                5: 3,
+                6: 4,
+                7: 1,
+                8: 2,
+                9: 4,
+                10: 3,
+            },
+            'doc' : { 
+                1: 'lorem10'
+            }
+        },
+        'Symfony': {
             'reponse' : {
                 1: 4,
                 2: 1,
