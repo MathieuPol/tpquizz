@@ -190,7 +190,7 @@ const data = {
                 10: 1,
             },
             'doc' : { 
-                1: "Le HyperText Markup Language, généralement abrégé HTML ou, dans sa dernière version, HTML5, est le langage de balisage conçu pour représenter les pages web."
+                1: 'Le HyperText Markup Language, généralement abrégé HTML ou, dans sa dernière version, HTML5, est le langage de balisage conçu pour représenter les pages web.'
 //4 Balise autofermante
 //8 src (pour source) permet à la balise <img> de faire le lien vers le chemin de l'image.
             }
@@ -214,4 +214,3 @@ const data = {
         }
     }
 }
-

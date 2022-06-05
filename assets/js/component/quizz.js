@@ -1,30 +1,42 @@
+//Classe gérant l'interaction avec le quizz
 const quizz = {
 
+//représente la question courante
+//Par défaut on affiche la premiere question
     index: 1,
+//Score du joueur
     score: 0,
 
-
+//Sert à séléctionner le quizz de départ
     quizzInit: function(){
         quizz.addNavEventListener();
         quizz.addAnswerEventListener();
     },
 
+//*-----------------------------------------------------------
+//*--EVENT LISTENER
+//*-----------------------------------------------------------
     addNavEventListener: function(){
         const btnNav = document.querySelectorAll('.nav__list--item--btn');
         for (const btn of btnNav) {
             btn.addEventListener("click", quizz.handleNavBtn);            
         }
     },
-
     addAnswerEventListener: function(){
         const btnQuizz = document.querySelectorAll('.quizz button');
         for (const btn of btnQuizz) {
             btn.addEventListener("click", quizz.handleAnswerBtn);            
         }
     },
-
-
-
+    removeAnswerEventListener: function(){
+        const btnQuizz = document.querySelectorAll('.quizz button');
+        for (const btn of btnQuizz) {
+            btn.removeEventListener("click", quizz.handleAnswerBtn);            
+        }
+    },
+//*----------------------------------------------------------------
+//*--Handle Envent
+//*-----------------------------------------------------------
     handleNavBtn: function(evt){
         evt.preventDefault();
         document.querySelector('main').classList.toggle('hide');
@@ -35,50 +47,6 @@ const quizz = {
         document.querySelector('.nav__list').classList.add('hide');
         document.querySelector('.navSelector').classList.add('hide');
     },
-
-    setQuizz: function(elm)
-    {
-
-                //*Element lié aux data
-        if(document.querySelector('.nextBtn'))
-        {
-            document.querySelector('.nextBtn').remove();
-        }
-
-        const currentQuizz = data.allQuestions[elm];
-        const currentQuestion = currentQuizz.questions;
-        const currentAnswer = currentQuizz.answers[quizz.index];
-        const answerQuizz = data.allAnswers[elm];
-
-
-        document.querySelector('.quizz').setAttribute('questionSelector', quizz.index);
-        let qBody = document.querySelector('.question');
-        qBody.textContent = currentQuestion[quizz.index];
-
-        let answers = document.querySelectorAll('.answer');
-        let i = 1;
-
-        for (const iterator of answers) {
-            let repA = iterator.querySelector('p');
-            repA.textContent = currentAnswer[i];
-            let btnA = iterator.querySelector('button');
-            btnA.setAttribute("value", i);
-            i++;
-        }
-
-//* Une fois les buttons créés on leurs assigne un eventlistener
-    },
-
-
-    checkAnswer: function(userResp, correctResp){
-        if(correctResp == userResp)
-        {
-
-            return true;
-        }
-        return false;
-    },
-
 
     handleAnswerBtn: function(evt){
         evt.preventDefault();
@@ -127,20 +95,6 @@ const quizz = {
         };
     },
 
-    correct: function(){
-        quizz.removeAnswerEventListener();
-    },
-
-    wrong: function(){
-        const allBtn = document.querySelector('.answer');
-        quizz.removeAnswerEventListener();
-
-
-
-
-
-    },
- 
     handleNextBtn: function(evt){
         evt.preventDefault();
         quizz.index ++;
@@ -161,12 +115,69 @@ const quizz = {
             quizz.alertDisplay();
             quizz.index = 1;
             quizz.score = 0;
-
+            quizz.nextQuestion();
             quizz.quizzInit();
             
         }
     },
+//*---------------------------------------------------------
+//*--Initialisation des questions
+//*---------------------------------------------------------
+    setQuizz: function(elm)
+    {
 
+                //*Element lié aux data
+        if(document.querySelector('.nextBtn'))
+        {
+            document.querySelector('.nextBtn').remove();
+        }
+
+        const currentQuizz = data.allQuestions[elm];
+        const currentQuestion = currentQuizz.questions;
+        const currentAnswer = currentQuizz.answers[quizz.index];
+        const answerQuizz = data.allAnswers[elm];
+
+
+        document.querySelector('.quizz').setAttribute('questionSelector', quizz.index);
+        let qBody = document.querySelector('.question');
+        qBody.textContent = currentQuestion[quizz.index];
+
+        let answers = document.querySelectorAll('.answer');
+        let i = 1;
+
+        for (const iterator of answers) {
+            let repA = iterator.querySelector('p');
+            repA.textContent = currentAnswer[i];
+            let btnA = iterator.querySelector('button');
+            btnA.setAttribute("value", i);
+            i++;
+        }
+    },
+//*---------------------------------------------------------
+//*--Check de la réponse
+//*---------------------------------------------------------
+    checkAnswer: function(userResp, correctResp){
+        if(correctResp == userResp)
+        {
+
+            return true;
+        }
+        return false;
+    },
+//*---------------------------------------------------------
+//*--génération bonne ou mauvaise réponse
+//*---------------------------------------------------------
+    correct: function(){
+        quizz.removeAnswerEventListener();
+    },
+
+    wrong: function(){
+        const allBtn = document.querySelector('.answer');
+        quizz.removeAnswerEventListener();
+    },
+//*---------------------------------------------------------
+//*--génération de la question suivante
+//*---------------------------------------------------------
     nextQuestion: function(){
         let answerclass = document.querySelectorAll('.answer button');
         for (const iterator of answerclass) {
@@ -176,30 +187,21 @@ const quizz = {
         document.querySelector('.documentation').classList.add('hide');
 
     },
-
-    removeAnswerEventListener: function(){
-        const btnQuizz = document.querySelectorAll('.quizz button');
-        for (const btn of btnQuizz) {
-            btn.removeEventListener("click", quizz.handleAnswerBtn);            
-        }
-    },
-
+//*---------------------------------------------------------
+//*--génération de l'alerte de fin de quizz
+//*---------------------------------------------------------
     alertDisplay: function(){
         if(quizz.score < 5){
-            alert("Ne lachez rien à force de traveiller on fini par y arriver!!");
+            alert("Votre score est de "+ quizz.score +"/10. Ne lachez rien à force de traveiller on fini par y arriver!!");
             return
         }
         if ( quizz.score >= 5 && quizz.score <= 7){
-            alert("Encore juste un effort et c'est tout bon!!");
+            alert("Votre score est de "+ quizz.score +"/10. Encore juste un effort et c'est tout bon!!");
             return
         }
         if(quizz.score > 7){
-            alert("Bravo c'est presque un sans fautes");
+            alert("Votre score est de "+ quizz.score +"/10. Bravo c'est presque un sans fautes");
             return;
         }
     }
-
-
-
-
 }
