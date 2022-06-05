@@ -1,6 +1,6 @@
 const quizz = {
 
-    index: 9,
+    index: 1,
     score: 0,
 
 
