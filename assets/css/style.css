@@ -4,12 +4,22 @@ html{
 
 body{
     height: 100vh;
+    background: radial-gradient(closest-side, #3f87a6, #f8e1e1, #f69d3c);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
     text-align: center;
 }
 
 h1{
     font-size: 4rem;
 }
+
+section{
+    margin: auto;
+    border-radius: 5em;
+}
+
 
 
 button a{
@@ -72,7 +82,7 @@ button {
 }
 
 .HTML{
-    background-image: url(../image/HTML.png);
+/*     background-image: url(../image/HTML.png); */
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -92,14 +102,14 @@ button {
 }
 
 .MySQL{
-    background-image: url(../image/MySQL.svg.png);
+/*     background-image: url(../image/MySQL.svg.png); */
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .Symfony{
-    background-image: url(../image/Symfony.png);
+/*     background-image: url(../image/Symfony.png); */
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -115,4 +125,10 @@ button {
 
 .hide{
     display: none;
+}
+
+@media (min-width: 700px) {
+    section{
+        width: 50%;
+    }
 }

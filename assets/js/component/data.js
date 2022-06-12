@@ -158,77 +158,77 @@ const data = {
         },
         'Javascript' : {
             'questions': {
-                1: 'Que signifie HTML ?',
-                2: 'À quoi sert HTML ?',
-                3: 'En quelle année est né HTML ?',
-                4: "Qu'est ce qu'un navigateur web ?",
-                5: 'Comment représenter un paragraphe en HTML ?',
-                6: 'Comment représenter une liste en HTML ?',
-                7: "Trouvez l'intrus dans cette liste",
-                8: 'Citez un attribut HTML lié aux images',
-                9: "Quel attribut permet d'indiquer la destination d'un lien ?",
-                10: 'À quoi servent les spécifications ARIA, liées à HTML ?'
+                1: 'Quel est le rapport entre Java et JavaScript ?',
+                2: 'Laquelle de ces syntaxes est correcte ?',
+                3: 'Quel attribut des noeuds de l\'arbre DOM correspond à l\'attribut HTML class ?',
+                4: "Dans un fichier JavaScript externe (.js), il faut :",
+                5: 'Lequel de ces types d\'événements n\'existe pas ?',
+                6: 'Quelle méthode n\'existe pas dans le DOM ?',
+                7: "Laquelle de ces propositions est un nom de variable valide en JavaScript ?",
+                8: 'Dans une boucle, l\'instruction continue permet de :',
+                9: "var iNum = 12; iNum %= 2; A la suite de cette expression, combien vaut iNum ?",
+                10: 'Quelle méthode permet de comparer deux chaînes texte ?'
             },
             'answers' : {
                 1: {
-                    1: 'Colorful Style Sheets',
-                    2: 'Computer Style Sheets',
-                    3: 'Creative Style Sheets',
-                    4: 'Cascading Style Sheets'
+                    1: 'C\'est le même langage, mais le nom  JavaScript  est utilisé pour le code s\'exécutant dans une page Web.',
+                    2: 'Ce sont deux langages différents, malgré quelques points communs dans la syntaxe.',
+                    3: 'Java est une version améliorée de JavaScript.',
+                    4: 'Java est une île, ça n\'a rien à voir !'
                 },
                 2: {
-                    1: 'text-transform: capitalize;',
-                    2: 'font-transform: capitalize;',
-                    3: 'text-decoration: uppercase;',
-                    4: "C'est impossible"
+                    1: 'if (a != 2) {}',
+                    2: 'if a != 2 {}',
+                    3: 'if (a <> 2) {}',
+                    4: "if a <> 2 {}"
                 },
                 3: {
-                    1: '#titi {}',
-                    2: '*titi {}',
-                    3: '.titi {}',
-                    4: "titi {}"
+                    1: 'class',
+                    2: 'CLASS',
+                    3: 'className',
+                    4: "listClass"
                 },
                 4: {
-                    1: "#titi {}",
-                    2: "*titi {}",
-                    3: '.titi {}',
-                    4: 'titi {}'
+                    1: " entourer le code avec les balises <script> et </script>.",
+                    2: "préciser l’encodage du fichier avec la règle @charset.",
+                    3: 'échapper les caractères spéciaux (X)HTML',
+                    4: 'Aucune des réponses précédentes.'
                 },
                 5: {
-                    1: 'fgcolor:',
-                    2: 'text-color:',
-                    3: 'color:',
-                    4: 'bgcolor:'
+                    1: 'blur',
+                    2: 'load',
+                    3: 'mouseclick',
+                    4: 'mouseout'
                 },
                 6: {
-                    1: 'text-size:',
-                    2: 'font-style:',
-                    3: 'text-style:',
-                    4: 'font-size:'
+                    1: 'document.getElementsByClassName',
+                    2: 'document.getElementsByTagName',
+                    3: 'document.getElementsByAttribute',
+                    4: 'document.getElementById'
                 },
                 7: {
-                    1: '#toto',
-                    2: '.titi',
-                    3: 'body',
-                    4: '*'
+                    1: 'var',
+                    2: '2a',
+                    3: 'NaN',
+                    4: '$b'
                 },
                 8: {
-                    1: 'underline: none;',
-                    2: 'text-decoration: none;',
-                    3: 'text-decoration: underline;',
-                    4: 'text-decoration: hidden;'
+                    1: 'continuer l\'exécution du code après la boucle.',
+                    2: 'passer à l\'itération suivante.',
+                    3: 'revenir au début de l\'itération courante.',
+                    4: 'supprimer toutes les variables globales.'
                 },
                 9: {
-                    1: 'hidden',
-                    2: 'invisible',
-                    3: 'no',
-                    4: 'none'
+                    1: '6',
+                    2: '14',
+                    3: '0.12',
+                    4: '0'
                 },
                 10: {
-                    1: 'police:',
-                    2: 'font:',
-                    3: 'font-family:',
-                    4: 'text-family:'
+                    1: 'charAt()',
+                    2: 'charCodeAt()',
+                    3: 'indexOf()',
+                    4: 'localeCompare()'
                 },
             
                 
@@ -507,19 +507,28 @@ const data = {
         },
         'Javascript': {
             'reponse' : {
-                1: 4,
+                1: 2,
                 2: 1,
-                3: 1,
-                4: 3,
+                3: 3,
+                4: 4,
                 5: 3,
-                6: 4,
-                7: 1,
+                6: 3,
+                7: 4,
                 8: 2,
                 9: 4,
-                10: 3,
+                10: 4,
             },
             'doc' : { 
-                1: 'lorem10'
+                1: "Le nom  JavaScript  a été choisi en raison des similitudes de syntaxe, et aussi (surtout ?) parce que le nom  Java  était à la mode",
+                2: 'lorem10',
+                3: 'lorem10',
+                4: 'lorem10',
+                5: "Il faut utiliser click, qui a d'ailleurs l'avantage de se déclencher aussi avec l'activation par le clavier.",
+                6: 'lorem10',
+                7: "var est un mot-clé ; 2a n'est pas valide car un identifiant ne peut pas commencer par un chiffre ; int est un mot-clé réservé pour les futures versions de la spécification ECMAScript.",
+                8: 'lorem10',
+                9: 'lorem10',
+                10: "La bonne réponse est localeCompare()."
             }
         },
         'PHP': {

@@ -35,11 +35,12 @@ const quizz = {
         }
     },
 //*----------------------------------------------------------------
-//*--Handle Envent
+//*--Handle Event
 //*-----------------------------------------------------------
     handleNavBtn: function(evt){
         evt.preventDefault();
         document.querySelector('main').classList.toggle('hide');
+        document.querySelector('h1').classList.add('hide');
         const elm = evt.currentTarget.textContent;
         quizz.setQuizz(elm);
         document.querySelector('.quizz').setAttribute('quizzSelector', elm);
@@ -115,6 +116,7 @@ const quizz = {
             quizz.alertDisplay();
             quizz.index = 1;
             quizz.score = 0;
+            document.querySelector('.score').textContent = "score:" + quizz.score + "/10";
             quizz.nextQuestion();
             quizz.quizzInit();
             
