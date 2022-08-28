@@ -1,3 +1,5 @@
+//! tous les quizz n'ont pas été traité
+//! ce projet est encore en wip
 const data = {
     allQuestions : {
         'HTML': {
